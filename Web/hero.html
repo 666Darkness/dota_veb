@@ -1,0 +1,28 @@
+
+
+{% extends "baseWeb.html" %}
+
+
+{% block style %}{% endblock %}
+{% block title %}{{data[0][1]}}{% endblock %}
+
+{% block main %}
+<a href="/main">кнопка</a>
+{% for id, name, info, url_image, strange, agility, intelegens, hp, manapool, attack, armor, speed, distanse_attack, category in data %}
+    <h1>{{name}} /// {{category}}</h1>
+    <img src ='{{url_image}}'>
+    <p>{{info}}</p>
+
+    {% endfor %}
+    
+    {% for id, title, info, url_image, id_hero in all_spell %}
+    <img src ='{{url_image}}'>
+    <p>{{title}}</p> 
+    <p>{{info}}</p>
+    <p>===============================================</p> 
+    {% endfor %}
+
+    
+    
+
+{% endblock %}
